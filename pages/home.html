@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Gerenciador de usuários </title>
+  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="icon" href="/assets/UserIcon.png" type="image/x-icon">
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- Cabeçalho -->
+    <header class="cabecalho">
+      <div class="titulo">
+        <div class="barra"></div>
+        <h1> Gerenciador de usuários </h1>
+      </div>
+      <button id="botao-novo"> + Novo usuário </button>
+    </header>
+
+    <!-- Barra de pesquisa -->
+    <div class="caixa-pesquisa">
+      <span class="icone-lupa"> 🔍︎ </span>
+      <input id="campo-pesquisa" type="text" placeholder="Buscar por nome ou e-mail...">
+    </div>
+
+    <!-- Lista de usuários -->
+    <div id="lista-usuarios" class="lista-usuarios"></div>
+
+    <!-- Mensagem se estiver vazio -->
+    <div id="mensagem-vazia" class="mensagem-vazia oculto">
+      <p><strong> Nenhum usuário encontrado. </strong></p>
+      <span> Clique em “Novo usuário” para começar. </span>
+    </div>
+
+    <!-- Diálogo de cadastro -->
+    <div id="dialogo" class="dialogo oculto">
+      <div class="dialogo-conteudo">
+        <div class="dialogo-cabecalho">
+          <h2 id="titulo-dialogo"> Novo usuário </h2>
+          <span id="fechar-dialogo" class="dialogo-fechar">&times;</span>
+        </div>
+
+        <div class="dialogo-corpo">
+          <label for="input-nome"> Nome </label>
+          <input id="input-nome" type="text" placeholder="Ex: Fernanda Rodrigues" required>
+
+          <label for="input-email"> E-mail </label>
+          <input id="input-email" type="email" placeholder="Ex: fernanda@gmail.com" required>
+        </div>
+
+        <div class="dialogo-rodape">
+          <button id="botao-cancelar" class="botao-cancelar"> Cancelar </button>
+          <button id="botao-salvar" class="botao-salvar"> Salvar </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/scripts/home.js"></script>
+</body>
+</html>
